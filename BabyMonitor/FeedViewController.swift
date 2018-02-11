@@ -148,12 +148,28 @@ extension FeedViewController {
 extension FeedViewController {
     
     func startAudioStream() {
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            print("AVAudioSession Category Playback OK")
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                print("AVAudioSession is Active")
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
         guard let url = URL(string: self.kAudioURL) else {
             showAlert(title: "Error", message: "Can't start audio stream")
             return
         }
         
-        let player = AVPlayer(url: url)
+        let playerItem = AVPlayerItem(url: url)
+        let player = AVPlayer(playerItem: playerItem)
         player.play()
     }
     
