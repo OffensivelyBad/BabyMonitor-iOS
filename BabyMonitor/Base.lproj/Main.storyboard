@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PGd-25-RAB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AVENGEANCE MIGHTIEST AVENGER.ttf">
+            <string>AvengeanceMightiestAvenger</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Feed View Controller-->
+        <scene sceneID="i1V-P8-Ubt">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="PGd-25-RAB" customClass="FeedViewController" customModule="BabyMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REC-TA-1XB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wolverine_yellow_background" translatesAutoresizingMaskIntoConstraints="NO" id="Hm7-9D-ALw">
+                                <rect key="frame" x="0.0" y="476" width="375" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="atw-1I-0cw"/>
+                                </constraints>
+                            </imageView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHt-0R-Gv0">
+                                <rect key="frame" x="8" y="153" width="359" height="269.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CHt-0R-Gv0" secondAttribute="height" multiplier="1.33333:1" id="dgc-6X-GO4"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wolverine_title" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-cM-HDS">
+                                <rect key="frame" x="8" y="80" width="359" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="4s1-yL-oyP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Dch-pl-Xxz"/>
+                                    <constraint firstAttribute="width" id="bPF-wA-0lR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="nZZ-bW-f5e"/>
+                                    <constraint firstAttribute="width" constant="100" id="pcY-Kv-QgA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dch-pl-Xxz"/>
+                                        <exclude reference="bPF-wA-0lR"/>
+                                        <exclude reference="nZZ-bW-f5e"/>
+                                        <exclude reference="pcY-Kv-QgA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Dch-pl-Xxz"/>
+                                        <exclude reference="bPF-wA-0lR"/>
+                                        <exclude reference="nZZ-bW-f5e"/>
+                                        <exclude reference="pcY-Kv-QgA"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bol-3C-Ron">
+                                <rect key="frame" x="147.5" y="436.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="bGk-HX-YSK"/>
+                                    <constraint firstAttribute="height" constant="80" id="bPN-fq-DPM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvengeanceMightiestAvenger" family="Avengeance Mightiest Avenger" pointSize="18"/>
+                                <state key="normal" title="Light On" backgroundImage="x_men_button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="lightTapped:" destination="PGd-25-RAB" eventType="touchUpInside" id="91f-6G-fme"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36d-uN-opo">
+                                <rect key="frame" x="27.5" y="436.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aqv-Fy-Dtf"/>
+                                    <constraint firstAttribute="height" constant="80" id="tTz-2R-JGF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvengeanceMightiestAvenger" family="Avengeance Mightiest Avenger" pointSize="14"/>
+                                <state key="normal" title="Motion On" backgroundImage="x_men_button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="motionTapped:" destination="PGd-25-RAB" eventType="touchUpInside" id="IQS-MK-Gnb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMd-tx-cc0">
+                                <rect key="frame" x="267.5" y="436.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4so-Rg-eRW"/>
+                                    <constraint firstAttribute="height" constant="80" id="sH6-x2-Ons"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvengeanceMightiestAvenger" family="Avengeance Mightiest Avenger" pointSize="17"/>
+                                <state key="normal" title="Archive" backgroundImage="x_men_button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="archiveTapped:" destination="PGd-25-RAB" eventType="touchUpInside" id="wSS-Fd-SXC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.87450980392156863" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EMd-tx-cc0" firstAttribute="leading" secondItem="bol-3C-Ron" secondAttribute="trailing" constant="40" id="GDk-Ni-uC9"/>
+                            <constraint firstItem="Hm7-9D-ALw" firstAttribute="trailing" secondItem="HUP-bE-Bbl" secondAttribute="trailing" id="JQ0-tl-fkK"/>
+                            <constraint firstItem="36d-uN-opo" firstAttribute="centerY" secondItem="bol-3C-Ron" secondAttribute="centerY" id="Nry-4s-ih5"/>
+                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="bgp-cM-HDS" secondAttribute="trailing" constant="8" id="Rvu-za-qUO"/>
+                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="CHt-0R-Gv0" secondAttribute="trailing" constant="8" id="Tfh-DZ-XCy"/>
+                            <constraint firstItem="Hm7-9D-ALw" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" id="TtS-06-rRl"/>
+                            <constraint firstItem="bgp-cM-HDS" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" constant="60" id="WpS-lm-1gQ"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" id="Y8x-4e-L2V"/>
+                            <constraint firstItem="bgp-cM-HDS" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="cHx-kN-N06"/>
+                            <constraint firstItem="bol-3C-Ron" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="huD-cc-f2a"/>
+                            <constraint firstItem="bol-3C-Ron" firstAttribute="leading" secondItem="36d-uN-opo" secondAttribute="trailing" constant="40" id="kM6-yF-zlE"/>
+                            <constraint firstItem="bol-3C-Ron" firstAttribute="top" secondItem="CHt-0R-Gv0" secondAttribute="bottom" constant="14" id="l3N-0C-joa"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="min-SR-NUm"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="o5m-cB-gll"/>
+                            <constraint firstItem="Hm7-9D-ALw" firstAttribute="bottom" secondItem="HUP-bE-Bbl" secondAttribute="bottom" id="qB5-hY-MRE"/>
+                            <constraint firstItem="EMd-tx-cc0" firstAttribute="centerY" secondItem="bol-3C-Ron" secondAttribute="centerY" id="r1N-NJ-MK0"/>
+                            <constraint firstItem="bgp-cM-HDS" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="tBu-so-9ue"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="top" secondItem="bgp-cM-HDS" secondAttribute="bottom" constant="-40" id="uDU-vC-mu0"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="trailing" secondItem="HUP-bE-Bbl" secondAttribute="trailing" id="uz3-N4-LOo"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="bottom" secondItem="HUP-bE-Bbl" secondAttribute="bottom" id="vKG-aM-Lcj"/>
+                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="z2a-5k-bVy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HUP-bE-Bbl"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cHx-kN-N06"/>
+                                <exclude reference="Y8x-4e-L2V"/>
+                                <exclude reference="o5m-cB-gll"/>
+                                <exclude reference="uz3-N4-LOo"/>
+                                <exclude reference="vKG-aM-Lcj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="cHx-kN-N06"/>
+                                <include reference="Y8x-4e-L2V"/>
+                                <include reference="o5m-cB-gll"/>
+                                <include reference="uz3-N4-LOo"/>
+                                <include reference="vKG-aM-Lcj"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="archiveButton" destination="EMd-tx-cc0" id="NGN-Fl-nlo"/>
+                        <outlet property="lightButton" destination="bol-3C-Ron" id="J3R-tr-yrg"/>
+                        <outlet property="motionButton" destination="36d-uN-opo" id="w2y-Ix-qr3"/>
+                        <outlet property="webView" destination="CHt-0R-Gv0" id="aht-yq-7GR"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeU-bI-oeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="148.87556221889056" y="8.8000000000000007"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wolverine_title" width="1000" height="359"/>
+        <image name="wolverine_yellow_background" width="384" height="519"/>
+        <image name="x_men_button" width="199" height="199"/>
+    </resources>
 </document>

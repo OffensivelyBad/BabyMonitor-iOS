@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		719520041F6ECA59009523F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719520031F6ECA59009523F6 /* AppDelegate.swift */; };
-		719520061F6ECA59009523F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719520051F6ECA59009523F6 /* ViewController.swift */; };
+		719520061F6ECA59009523F6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719520051F6ECA59009523F6 /* FeedViewController.swift */; };
 		719520091F6ECA59009523F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719520071F6ECA59009523F6 /* Main.storyboard */; };
 		7195200B1F6ECA59009523F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7195200A1F6ECA59009523F6 /* Assets.xcassets */; };
 		7195200E1F6ECA59009523F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7195200C1F6ECA59009523F6 /* LaunchScreen.storyboard */; };
+		719520231F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER AT.otf in Resources */ = {isa = PBXBuildFile; fileRef = 719520161F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.otf */; };
+		719520241F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER AT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 719520171F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.ttf */; };
+		719520251F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BD.otf in Resources */ = {isa = PBXBuildFile; fileRef = 719520181F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.otf */; };
+		719520261F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 719520191F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.ttf */; };
+		719520271F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201A1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.otf */; };
+		719520281F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201B1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.ttf */; };
+		719520291F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201C1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.otf */; };
+		7195202A1F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201D1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.ttf */; };
+		7195202B1F6EE83B009523F6 /* AVENGEANCE MIGHTIEST AVENGER.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201E1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.otf */; };
+		7195202C1F6EE83B009523F6 /* AVENGEANCE MIGHTIEST AVENGER.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7195201F1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.ttf */; };
+		7195202D1F6EE83B009523F6 /* AVENGEANCE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 719520201F6EE5FD009523F6 /* AVENGEANCE.otf */; };
+		7195202E1F6EE83B009523F6 /* AVENGEANCE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 719520211F6EE5FD009523F6 /* AVENGEANCE.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		719520001F6ECA59009523F6 /* BabyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719520031F6ECA59009523F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		719520051F6ECA59009523F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		719520051F6ECA59009523F6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		719520081F6ECA59009523F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7195200A1F6ECA59009523F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7195200D1F6ECA59009523F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7195200F1F6ECA59009523F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		719520161F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER AT.otf"; sourceTree = "<group>"; };
+		719520171F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER AT.ttf"; sourceTree = "<group>"; };
+		719520181F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER BD.otf"; sourceTree = "<group>"; };
+		719520191F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER BD.ttf"; sourceTree = "<group>"; };
+		7195201A1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER BI.otf"; sourceTree = "<group>"; };
+		7195201B1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER BI.ttf"; sourceTree = "<group>"; };
+		7195201C1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER.otf"; sourceTree = "<group>"; };
+		7195201D1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER.ttf"; sourceTree = "<group>"; };
+		7195201E1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE MIGHTIEST AVENGER.otf"; sourceTree = "<group>"; };
+		7195201F1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE MIGHTIEST AVENGER.ttf"; sourceTree = "<group>"; };
+		719520201F6EE5FD009523F6 /* AVENGEANCE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AVENGEANCE.otf; sourceTree = "<group>"; };
+		719520211F6EE5FD009523F6 /* AVENGEANCE.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AVENGEANCE.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +79,33 @@
 			isa = PBXGroup;
 			children = (
 				719520031F6ECA59009523F6 /* AppDelegate.swift */,
-				719520051F6ECA59009523F6 /* ViewController.swift */,
+				719520051F6ECA59009523F6 /* FeedViewController.swift */,
 				719520071F6ECA59009523F6 /* Main.storyboard */,
 				7195200A1F6ECA59009523F6 /* Assets.xcassets */,
 				7195200C1F6ECA59009523F6 /* LaunchScreen.storyboard */,
 				7195200F1F6ECA59009523F6 /* Info.plist */,
+				719520151F6EE5FD009523F6 /* the-fontry_avengeance */,
 			);
 			path = BabyMonitor;
+			sourceTree = "<group>";
+		};
+		719520151F6EE5FD009523F6 /* the-fontry_avengeance */ = {
+			isa = PBXGroup;
+			children = (
+				719520161F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.otf */,
+				719520171F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER AT.ttf */,
+				719520181F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.otf */,
+				719520191F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BD.ttf */,
+				7195201A1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.otf */,
+				7195201B1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER BI.ttf */,
+				7195201C1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.otf */,
+				7195201D1F6EE5FD009523F6 /* AVENGEANCE HEROIC AVENGER.ttf */,
+				7195201E1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.otf */,
+				7195201F1F6EE5FD009523F6 /* AVENGEANCE MIGHTIEST AVENGER.ttf */,
+				719520201F6EE5FD009523F6 /* AVENGEANCE.otf */,
+				719520211F6EE5FD009523F6 /* AVENGEANCE.ttf */,
+			);
+			path = "the-fontry_avengeance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +167,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7195202B1F6EE83B009523F6 /* AVENGEANCE MIGHTIEST AVENGER.otf in Resources */,
+				719520251F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BD.otf in Resources */,
+				719520241F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER AT.ttf in Resources */,
+				7195202A1F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER.ttf in Resources */,
+				719520271F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BI.otf in Resources */,
+				719520291F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER.otf in Resources */,
+				7195202E1F6EE83B009523F6 /* AVENGEANCE.ttf in Resources */,
 				7195200E1F6ECA59009523F6 /* LaunchScreen.storyboard in Resources */,
+				719520261F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BD.ttf in Resources */,
 				7195200B1F6ECA59009523F6 /* Assets.xcassets in Resources */,
+				719520231F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER AT.otf in Resources */,
+				7195202C1F6EE83B009523F6 /* AVENGEANCE MIGHTIEST AVENGER.ttf in Resources */,
+				719520281F6EE83B009523F6 /* AVENGEANCE HEROIC AVENGER BI.ttf in Resources */,
+				7195202D1F6EE83B009523F6 /* AVENGEANCE.otf in Resources */,
 				719520091F6ECA59009523F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				719520061F6ECA59009523F6 /* ViewController.swift in Sources */,
+				719520061F6ECA59009523F6 /* FeedViewController.swift in Sources */,
 				719520041F6ECA59009523F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
