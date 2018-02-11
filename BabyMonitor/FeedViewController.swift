@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import AVFoundation
 
 class FeedViewController: UIViewController {
 
@@ -22,6 +21,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var motionButton: UIButton!
     @IBOutlet weak var lightButton: UIButton!
     @IBOutlet weak var archiveButton: UIButton!
+    @IBOutlet weak var audioWebView: WKWebView!
     
     var showingArchive = false
     var lightsOn = false
@@ -148,29 +148,12 @@ extension FeedViewController {
 extension FeedViewController {
     
     func startAudioStream() {
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            print("AVAudioSession Category Playback OK")
-            do {
-                try AVAudioSession.sharedInstance().setActive(true)
-                print("AVAudioSession is Active")
-                
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
         guard let url = URL(string: self.kAudioURL) else {
-            showAlert(title: "Error", message: "Can't start audio stream")
+            showAlert(title: "Error", message: "Could not start audio")
             return
         }
-        
-        let playerItem = AVPlayerItem(url: url)
-        let player = AVPlayer(playerItem: playerItem)
-        player.play()
+        let request = URLRequest(url: url)
+        self.audioWebView.load(request)
     }
     
 }
