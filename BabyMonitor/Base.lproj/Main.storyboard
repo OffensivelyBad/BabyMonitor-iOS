@@ -29,17 +29,13 @@
                                     <constraint firstAttribute="height" constant="191" id="atw-1I-0cw"/>
                                 </constraints>
                             </imageView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHt-0R-Gv0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Jz-i5-46h">
                                 <rect key="frame" x="8" y="153" width="359" height="269.5"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CHt-0R-Gv0" secondAttribute="height" multiplier="1.33333:1" id="dgc-6X-GO4"/>
+                                    <constraint firstAttribute="width" secondItem="9Jz-i5-46h" secondAttribute="height" multiplier="1.33333:1" id="qjX-Ih-8ZE"/>
                                 </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wolverine_title" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-cM-HDS">
                                 <rect key="frame" x="8" y="80" width="359" height="113"/>
                                 <constraints>
@@ -51,6 +47,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="4s1-yL-oyP"/>
                                         <exclude reference="Dch-pl-Xxz"/>
                                         <exclude reference="bPF-wA-0lR"/>
                                         <exclude reference="nZZ-bW-f5e"/>
@@ -62,7 +59,12 @@
                                         <include reference="Dch-pl-Xxz"/>
                                         <exclude reference="bPF-wA-0lR"/>
                                         <exclude reference="nZZ-bW-f5e"/>
-                                        <exclude reference="pcY-Kv-QgA"/>
+                                        <include reference="pcY-Kv-QgA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4s1-yL-oyP"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -108,71 +110,59 @@
                                     <action selector="archiveTapped:" destination="PGd-25-RAB" eventType="touchUpInside" id="wSS-Fd-SXC"/>
                                 </connections>
                             </button>
-                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmG-uk-0CK">
-                                <rect key="frame" x="186.5" y="20" width="1" height="1"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="1Pk-et-LYD"/>
-                                    <constraint firstAttribute="height" constant="1" id="2j6-FM-cYA"/>
-                                </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.87450980392156863" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zmG-uk-0CK" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="3Ai-pa-L1Y"/>
+                            <constraint firstItem="9Jz-i5-46h" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="0lH-hX-n7V"/>
+                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="9Jz-i5-46h" secondAttribute="trailing" constant="8" id="9Vp-6D-86H"/>
                             <constraint firstItem="EMd-tx-cc0" firstAttribute="leading" secondItem="bol-3C-Ron" secondAttribute="trailing" constant="40" id="GDk-Ni-uC9"/>
+                            <constraint firstItem="9Jz-i5-46h" firstAttribute="top" secondItem="bgp-cM-HDS" secondAttribute="bottom" constant="-40" id="He2-WX-Xgm"/>
                             <constraint firstItem="Hm7-9D-ALw" firstAttribute="trailing" secondItem="HUP-bE-Bbl" secondAttribute="trailing" id="JQ0-tl-fkK"/>
+                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="bottom" secondItem="9Jz-i5-46h" secondAttribute="bottom" id="Jps-PF-tvn"/>
+                            <constraint firstItem="9Jz-i5-46h" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="NFB-w0-xt3"/>
+                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="9Jz-i5-46h" secondAttribute="trailing" constant="8" id="NWz-yE-3yJ"/>
                             <constraint firstItem="36d-uN-opo" firstAttribute="centerY" secondItem="bol-3C-Ron" secondAttribute="centerY" id="Nry-4s-ih5"/>
+                            <constraint firstItem="9Jz-i5-46h" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="R4k-wI-8XP"/>
                             <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="bgp-cM-HDS" secondAttribute="trailing" constant="8" id="Rvu-za-qUO"/>
-                            <constraint firstItem="HUP-bE-Bbl" firstAttribute="trailing" secondItem="CHt-0R-Gv0" secondAttribute="trailing" constant="8" id="Tfh-DZ-XCy"/>
                             <constraint firstItem="Hm7-9D-ALw" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" id="TtS-06-rRl"/>
+                            <constraint firstItem="bol-3C-Ron" firstAttribute="top" secondItem="9Jz-i5-46h" secondAttribute="bottom" constant="14" id="UaU-9O-6y9"/>
                             <constraint firstItem="bgp-cM-HDS" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" constant="60" id="WpS-lm-1gQ"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" id="Y8x-4e-L2V"/>
                             <constraint firstItem="bgp-cM-HDS" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="cHx-kN-N06"/>
+                            <constraint firstItem="bgp-cM-HDS" firstAttribute="top" secondItem="9Jz-i5-46h" secondAttribute="top" constant="-25" id="hWR-i7-NaL"/>
                             <constraint firstItem="bol-3C-Ron" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="huD-cc-f2a"/>
                             <constraint firstItem="bol-3C-Ron" firstAttribute="leading" secondItem="36d-uN-opo" secondAttribute="trailing" constant="40" id="kM6-yF-zlE"/>
-                            <constraint firstItem="bol-3C-Ron" firstAttribute="top" secondItem="CHt-0R-Gv0" secondAttribute="bottom" constant="14" id="l3N-0C-joa"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="min-SR-NUm"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="o5m-cB-gll"/>
                             <constraint firstItem="Hm7-9D-ALw" firstAttribute="bottom" secondItem="HUP-bE-Bbl" secondAttribute="bottom" id="qB5-hY-MRE"/>
                             <constraint firstItem="EMd-tx-cc0" firstAttribute="centerY" secondItem="bol-3C-Ron" secondAttribute="centerY" id="r1N-NJ-MK0"/>
                             <constraint firstItem="bgp-cM-HDS" firstAttribute="leading" secondItem="HUP-bE-Bbl" secondAttribute="leading" constant="8" id="tBu-so-9ue"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="top" secondItem="bgp-cM-HDS" secondAttribute="bottom" constant="-40" id="uDU-vC-mu0"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="trailing" secondItem="HUP-bE-Bbl" secondAttribute="trailing" id="uz3-N4-LOo"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="bottom" secondItem="HUP-bE-Bbl" secondAttribute="bottom" id="vKG-aM-Lcj"/>
-                            <constraint firstItem="zmG-uk-0CK" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="xtj-Kx-pG0"/>
-                            <constraint firstItem="CHt-0R-Gv0" firstAttribute="centerX" secondItem="REC-TA-1XB" secondAttribute="centerX" id="z2a-5k-bVy"/>
+                            <constraint firstItem="9Jz-i5-46h" firstAttribute="top" secondItem="HUP-bE-Bbl" secondAttribute="top" id="u2C-p6-2ug"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HUP-bE-Bbl"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9Vp-6D-86H"/>
+                                <exclude reference="Jps-PF-tvn"/>
+                                <exclude reference="NFB-w0-xt3"/>
+                                <exclude reference="u2C-p6-2ug"/>
                                 <exclude reference="cHx-kN-N06"/>
-                                <exclude reference="Y8x-4e-L2V"/>
-                                <exclude reference="o5m-cB-gll"/>
-                                <exclude reference="uz3-N4-LOo"/>
-                                <exclude reference="vKG-aM-Lcj"/>
+                                <exclude reference="hWR-i7-NaL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="9Vp-6D-86H"/>
+                                <include reference="Jps-PF-tvn"/>
+                                <include reference="NFB-w0-xt3"/>
+                                <include reference="u2C-p6-2ug"/>
                                 <include reference="cHx-kN-N06"/>
-                                <include reference="Y8x-4e-L2V"/>
-                                <include reference="o5m-cB-gll"/>
-                                <include reference="uz3-N4-LOo"/>
-                                <include reference="vKG-aM-Lcj"/>
+                                <include reference="hWR-i7-NaL"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="archiveButton" destination="EMd-tx-cc0" id="NGN-Fl-nlo"/>
-                        <outlet property="audioWebView" destination="zmG-uk-0CK" id="YE8-mM-k8p"/>
+                        <outlet property="containerView" destination="9Jz-i5-46h" id="dEY-d5-Es3"/>
                         <outlet property="lightButton" destination="bol-3C-Ron" id="J3R-tr-yrg"/>
                         <outlet property="motionButton" destination="36d-uN-opo" id="w2y-Ix-qr3"/>
-                        <outlet property="webView" destination="CHt-0R-Gv0" id="aht-yq-7GR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeU-bI-oeL" userLabel="First Responder" sceneMemberID="firstResponder"/>

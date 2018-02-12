@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import WebKit
+
 
 class FeedViewController: UIViewController {
 
@@ -17,11 +17,14 @@ class FeedViewController: UIViewController {
     let kLightsOnURL = "http://192.168.1.56:8080/lightsOn"
     let kLightsOffURL = "http://192.168.1.56:8080/lightsOff"
     
-    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var motionButton: UIButton!
     @IBOutlet weak var lightButton: UIButton!
     @IBOutlet weak var archiveButton: UIButton!
-    @IBOutlet weak var audioWebView: WKWebView!
+    @IBOutlet weak var containerView: UIView!
+    
+    // Web views
+    var webView = UIWebView()
+    var audioWebView = UIWebView()
     
     var showingArchive = false
     var lightsOn = false
@@ -29,13 +32,9 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupWebView()
-        
         configureButtons()
-        
+        setupWebView()
         startAudioStream()
-        
     }
 
     func configureButtons() {
@@ -124,7 +123,21 @@ extension FeedViewController {
     
     func setupWebView() {
         
+        // Add the webview
+        self.webView = UIWebView(frame: self.containerView.frame)
+        self.webView.scalesPageToFit = true
+        self.webView.translatesAutoresizingMaskIntoConstraints = false
+        self.containerView.addSubview(self.webView)
+        
+        // Constrain the webview
+        self.webView.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
+        self.webView.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
+        self.webView.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
+        self.webView.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor).isActive = true
+        
         // Round the corners
+        self.containerView.layer.cornerRadius = 6
+        self.containerView.layer.masksToBounds = true
         self.webView.layer.cornerRadius = 6
         self.webView.layer.masksToBounds = true
         
@@ -138,7 +151,7 @@ extension FeedViewController {
         // Create the html request
         guard let url = URL(string: requestedURL) else { return }
         let request = URLRequest(url: url)
-        self.webView.load(request)
+        self.webView.loadRequest(request)
         
     }
     
@@ -153,7 +166,7 @@ extension FeedViewController {
             return
         }
         let request = URLRequest(url: url)
-        self.audioWebView.load(request)
+//        self.audioWebView.load(request)
     }
     
 }
