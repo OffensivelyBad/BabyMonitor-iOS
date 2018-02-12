@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import SafariServices
 
 class FeedViewController: UIViewController {
 
-    let kMonitorURL = "http://192.168.1.56/html/cam_pic_new.php"
+    let kMonitorURL = "http://192.168.1.56/html/index.php"
     let kArchiveURL = "http://192.168.1.56/html/preview.php"
     let kAudioURL = "http://192.168.1.56:8000/raspi.m3u"
     let kLightsOnURL = "http://192.168.1.56:8080/lightsOn"
@@ -23,7 +23,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     // Web views
-    var webView = UIWebView()
+    var webView: SFSafariViewController!
     var audioWebView = UIWebView()
     
     var showingArchive = false
@@ -67,11 +67,11 @@ class FeedViewController: UIViewController {
         
         if self.showingArchive {
             self.archiveButton.setTitle("Archive", for: .normal)
-            loadURL(kMonitorURL)
+            
         }
         else {
             self.archiveButton.setTitle("Live Feed", for: .normal)
-            loadURL(kArchiveURL)
+            
         }
         
         self.showingArchive = !self.showingArchive
@@ -122,36 +122,24 @@ extension FeedViewController {
 extension FeedViewController {
     
     func setupWebView() {
-        
+        guard let url = URL(string: self.kMonitorURL) else { return }
         // Add the webview
-        self.webView = UIWebView(frame: self.containerView.frame)
-        self.webView.scalesPageToFit = true
-        self.webView.translatesAutoresizingMaskIntoConstraints = false
-        self.containerView.addSubview(self.webView)
+        self.webView = SFSafariViewController(url: url)
+        self.webView.view.frame = self.containerView.frame
+        self.webView.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(self.webView)
+        self.containerView.addSubview(self.webView.view)
+        self.webView.didMove(toParentViewController: self)
         
         // Constrain the webview
-        self.webView.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
-        self.webView.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
-        self.webView.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
-        self.webView.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor).isActive = true
+        self.webView.view.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
+        self.webView.view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
+        self.webView.view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
+        self.webView.view.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor).isActive = true
         
         // Round the corners
         self.containerView.layer.cornerRadius = 6
         self.containerView.layer.masksToBounds = true
-        self.webView.layer.cornerRadius = 6
-        self.webView.layer.masksToBounds = true
-        
-        // Create the html request
-        loadURL(self.kMonitorURL)
-        
-    }
-    
-    func loadURL(_ requestedURL: String) {
-        
-        // Create the html request
-        guard let url = URL(string: requestedURL) else { return }
-        let request = URLRequest(url: url)
-        self.webView.loadRequest(request)
         
     }
     
